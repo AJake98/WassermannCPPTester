@@ -6,13 +6,17 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace WassermannTester
 {
-	TEST_CLASS(WassermannTester)
+	TEST_CLASS(testsuiteForTestIfDayAndMonthIsAquarius)
 	{
 	public:
 		
-		TEST_METHOD(testsuiteForTestIfDayAndMonthIsAquarius)
+		TEST_METHOD(testForNormalCases)
 		{
-			
+			Assert::IsFalse(true != testIfDayAndMonthIsAquarius(25, 1));
+			Assert::IsFalse(false != testIfDayAndMonthIsAquarius(25, 10));
+			Assert::IsFalse(true != testIfDayAndMonthIsAquarius(6, 2));
+			Assert::IsFalse(false != testIfDayAndMonthIsAquarius(20, 4));
+			Assert::IsFalse(false != testIfDayAndMonthIsAquarius(18, 3));
 		}
 	};
 }
